@@ -1,0 +1,7 @@
+transformers
+torch
+streamlit
+sentencepiece
+flask
+bert
+tensorflow
