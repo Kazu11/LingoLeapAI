@@ -22,6 +22,40 @@ except FileNotFoundError:
     users_df = pd.DataFrame(columns=['id', 'username', 'age', 'interests'])
     interactions_df = pd.DataFrame(columns=['user_id', 'conversation_id', 'interaction_type'])
 
+# Idiom dataset
+english_idioms = [
+    {"idiom": "A piece of cake", "meaning": "Something very easy to do", "min_age": 8},
+    {"idiom": "Break a leg", "meaning": "Good luck", "min_age": 10},
+    {"idiom": "Hit the nail on the head", "meaning": "To describe exactly what is causing a situation or problem", "min_age": 12},
+    {"idiom": "It's raining cats and dogs", "meaning": "It's raining heavily", "min_age": 7},
+    {"idiom": "Jump on the bandwagon", "meaning": "Join a popular trend or activity", "min_age": 13},
+    {"idiom": "Kill two birds with one stone", "meaning": "Achieve two things with a single action", "min_age": 10},
+    {"idiom": "Let the cat out of the bag", "meaning": "Reveal a secret accidentally", "min_age": 9},
+    {"idiom": "Once in a blue moon", "meaning": "Very rarely", "min_age": 8},
+    {"idiom": "Speak of the devil", "meaning": "The person we were just talking about has appeared", "min_age": 11},
+    {"idiom": "The ball is in your court", "meaning": "It's your turn to take action or make a decision", "min_age": 12},
+    {"idiom": "Barking up the wrong tree", "meaning": "Looking for a solution in the wrong place", "min_age": 14},
+    {"idiom": "Cost an arm and a leg", "meaning": "To be very expensive", "min_age": 10},
+    {"idiom": "Don't put all your eggs in one basket", "meaning": "Don't risk everything on a single venture", "min_age": 13},
+    {"idiom": "Elephant in the room", "meaning": "An obvious problem that people avoid discussing", "min_age": 15},
+    {"idiom": "Get your act together", "meaning": "Organize yourself and behave more effectively", "min_age": 11},
+    {"idiom": "Beat around the bush", "meaning": "Avoid talking about something directly", "min_age": 12},
+    {"idiom": "Bite off more than you can chew", "meaning": "Take on a task that is too big to handle", "min_age": 11},
+    {"idiom": "Break the ice", "meaning": "Make people feel more comfortable in a social situation", "min_age": 10},
+    {"idiom": "Cut corners", "meaning": "Do something in the easiest or cheapest way", "min_age": 13},
+    {"idiom": "Get cold feet", "meaning": "Become nervous about doing something", "min_age": 12},
+    {"idiom": "Hit the books", "meaning": "Study hard", "min_age": 10},
+    {"idiom": "In hot water", "meaning": "In trouble", "min_age": 9},
+    {"idiom": "Keep your chin up", "meaning": "Stay positive in difficult times", "min_age": 11},
+    {"idiom": "Make a long story short", "meaning": "Tell something briefly", "min_age": 10},
+    {"idiom": "On cloud nine", "meaning": "Extremely happy", "min_age": 9},
+    {"idiom": "Pull someone's leg", "meaning": "Joke with someone", "min_age": 10},
+    {"idiom": "Raining cats and dogs", "meaning": "Raining heavily", "min_age": 8},
+    {"idiom": "Spill the beans", "meaning": "Reveal a secret", "min_age": 9},
+    {"idiom": "Take a rain check", "meaning": "Postpone an invitation", "min_age": 13},
+    {"idiom": "Under the weather", "meaning": "Feeling ill", "min_age": 10},
+]
+
 # Your existing functions go here
 def content_based_recommendations(topics, n=5):
     tfidf = TfidfVectorizer(stop_words='english')
@@ -132,6 +166,11 @@ def hybrid_recommendations(user_id, name, age, topics, occupation, n=5):
     logging.info(f"Final recommendations: {final_recommendations}")
     return final_recommendations
 
+def recommend_idioms(age, n=5):
+    suitable_idioms = [idiom for idiom in english_idioms if idiom['min_age'] <= age]
+    recommended = sorted(suitable_idioms, key=lambda x: x['min_age'], reverse=True)[:n]
+    return recommended
+
 @app.route('/', methods=['GET', 'POST'])
 def home():
     global users_df
@@ -235,6 +274,9 @@ def recommend():
                     "content": conversation['content'][:200] + '...' if len(conversation['content']) > 200 else conversation['content']
                 })
 
+        # Get idiom recommendations
+        idiom_recommendations = recommend_idioms(age, n=3)
+
         html = """
         <!DOCTYPE html>
         <html lang="en">
@@ -244,10 +286,10 @@ def recommend():
             <title>Recommendations</title>
             <style>
                 body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
-                h1 { color: #333; }
-                .recommendation { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
-                .recommendation h2 { color: #0066cc; margin-top: 0; }
-                .recommendation p { margin: 5px 0; }
+                h1, h2 { color: #333; }
+                .recommendation, .idiom { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
+                .recommendation h2, .idiom h3 { color: #0066cc; margin-top: 0; }
+                .recommendation p, .idiom p { margin: 5px 0; }
             </style>
         </head>
         <body>
@@ -255,17 +297,29 @@ def recommend():
             <p>Age: {{ age }}</p>
             <p>Based on topics: {{ topics }}</p>
             <p>Occupation: {{ occupation }}</p>
+            
+            <h2>Content Recommendations:</h2>
             {% for item in recommendations %}
             <div class="recommendation">
                 <h2>#{{ item['id'] }}: {{ item['topic'] }}</h2>
                 <p>{{ item['content'] }}</p>
             </div>
             {% endfor %}
+
+            <h2>Idiom Recommendations:</h2>
+            {% for idiom in idiom_recommendations %}
+            <div class="idiom">
+                <h3>{{ idiom['idiom'] }}</h3>
+                <p><strong>Meaning:</strong> {{ idiom['meaning'] }}</p>
+                <p><strong>Minimum Age:</strong> {{ idiom['min_age'] }}</p>
+            </div>
+            {% endfor %}
+            
             <a href="/">Back to Home</a>
         </body>
         </html>
         """
-        return render_template_string(html, name=name, user_id=user_id, age=age, topics=', '.join(topics), occupation=occupation, recommendations=result)
+        return render_template_string(html, name=name, user_id=user_id, age=age, topics=', '.join(topics), occupation=occupation, recommendations=result, idiom_recommendations=idiom_recommendations)
 
     except Exception as e:
         logging.error(f"An error occurred: {str(e)}")
