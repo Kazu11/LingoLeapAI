@@ -1,0 +1,201 @@
+id,content,timestamp,topic,tags,views,likes,comments,sentiment,length
+1,What's your take on the potential of renewable energy technologies?,2024-03-09 19:50:48,science,"science,trending",529,137,46,0.53,10
+2,How do you think we can promote healthier eating habits?,2023-12-05 19:50:48,food,"food,controversial",615,593,4,0.22,10
+3,How do you think social media has impacted celebrity culture?,2024-03-28 19:50:48,entertainment,"entertainment,controversial",110,26,21,0.46,10
+4,How do you think e-sports compare to traditional sports?,2024-06-22 19:50:48,sports,"sports,trending",78,44,16,-0.81,9
+5,What's your take on the importance of sleep for overall health?,2024-03-07 19:50:48,health,"health,popular",112,66,41,0.59,11
+6,What's your take on the slow food movement?,2023-06-28 19:50:48,food,"food,popular",83,45,20,-0.89,8
+7,How do you think AI will impact scientific research?,2023-11-03 19:50:48,science,"science,trending",982,508,144,0.16,9
+8,What's your opinion on genetically modified foods?,2024-03-08 19:50:48,food,"food,trending",368,2,2,0.94,7
+9,How do you think AI will impact scientific research?,2024-04-06 19:50:48,science,"science,controversial",860,529,138,0.46,9
+10,How do you think we can address global food waste?,2023-07-13 19:50:48,food,"food,trending",430,90,6,0.32,10
+11,How do you think climate change should be addressed politically?,2023-12-01 19:50:48,politics,"politics,new",569,251,172,-0.76,10
+12,What's your best tip for maintaining mental health?,2024-02-24 19:50:48,health,"health,new",947,712,356,-0.55,8
+13,Who's your favorite musician and why?,2024-03-10 19:50:48,entertainment,"entertainment,popular",595,422,152,-0.08,6
+14,How do you think climate change will impact global food production?,2024-01-23 19:50:48,food,"food,trending",234,33,18,0.26,11
+15,How do you think political polarization can be reduced?,2023-12-05 19:50:48,politics,"politics,popular",678,283,29,-0.48,9
+16,How do you think we can address the replication crisis in science?,2024-01-15 19:50:48,science,"science,controversial",788,206,189,-0.89,12
+17,What's your opinion on the current state of vaccine development?,2023-11-30 19:50:48,science,"science,trending",856,181,93,0.67,10
+18,What recent scientific discovery excites you the most?,2023-08-02 19:50:48,science,"science,popular",920,466,436,-0.32,8
+19,How do you think we can improve global access to healthcare?,2024-04-26 19:50:48,health,"health,trending",766,461,255,0.83,11
+20,Who do you think will win the World Cup this year?,2024-02-28 19:50:48,sports,"sports,new",924,260,259,0.77,11
+21,How do you see blockchain technology evolving in the next decade?,2024-04-17 19:50:48,technology,"technology,controversial",960,474,186,-0.57,11
+22,What's your take on the increasing diversity in Hollywood productions?,2023-07-19 19:50:48,entertainment,"entertainment,popular",216,10,0,-0.96,10
+23,Who do you think will win the World Cup this year?,2023-09-17 19:50:48,sports,"sports,new",290,215,184,0.36,11
+24,What's your take on the rise of digital nomads?,2024-01-29 19:50:48,travel,"travel,trending",391,278,52,-0.39,9
+25,What's your take on the impact of stress on physical health?,2024-05-09 19:50:48,health,"health,trending",342,91,70,0.52,11
+26,What are your thoughts on the role of lobbying in politics?,2024-05-10 19:50:48,politics,"politics,trending",567,341,107,-0.73,11
+27,How do you think we can promote healthier eating habits?,2024-02-09 19:50:48,food,"food,controversial",270,248,3,0.35,10
+28,What's your opinion on the role of exercise in maintaining good health?,2024-03-06 19:50:48,health,"health,new",339,138,123,-0.88,12
+29,How do you think technology is changing the restaurant industry?,2023-10-11 19:50:48,food,"food,trending",922,477,94,-0.47,10
+30,What's the best movie you've seen recently?,2023-09-14 19:50:48,entertainment,"entertainment,trending",335,8,1,0.67,7
+31,What's your opinion on the role of citizen science in research?,2024-02-12 19:50:48,science,"science,popular",914,35,26,-0.23,11
+32,What's your opinion on voluntourism?,2023-10-24 19:50:48,travel,"travel,new",752,670,277,-0.52,5
+33,What's your opinion on the impact of mass tourism on local cultures?,2023-12-29 19:50:48,travel,"travel,trending",340,14,2,-0.57,12
+34,What's your take on the slow food movement?,2023-10-27 19:50:48,food,"food,popular",447,419,234,0.54,8
+35,How do you think the pandemic has affected the world of sports?,2024-04-18 19:50:48,sports,"sports,controversial",354,127,95,-0.83,12
+36,What are your thoughts on the current economic policies?,2023-07-30 19:50:48,politics,"politics,popular",210,22,22,0.19,9
+37,Who do you think will win the World Cup this year?,2023-10-01 19:50:48,sports,"sports,trending",430,301,274,0.86,11
+38,How do you think climate change should be addressed politically?,2023-09-26 19:50:48,politics,"politics,trending",151,132,87,-0.22,10
+39,How do you think technology is changing healthcare?,2023-11-11 19:50:48,health,"health,controversial",759,607,602,-0.08,8
+40,How do you stay motivated to maintain a healthy lifestyle?,2023-11-03 19:50:48,health,"health,popular",618,442,84,-0.6,10
+41,Who's your favorite musician and why?,2023-11-27 19:50:48,entertainment,"entertainment,controversial",281,281,41,0.58,6
+42,What's the most memorable place you've visited?,2023-12-28 19:50:48,travel,"travel,controversial",288,45,16,0.45,7
+43,How do you think we can promote healthier eating habits?,2023-09-10 19:50:48,food,"food,new",605,355,237,-0.03,10
+44,What's your favorite food trend of the past year?,2023-10-19 19:50:48,food,"food,trending",265,186,123,-1.0,9
+45,What's your opinion on the rise of user-generated content platforms like TikTok?,2024-02-08 19:50:48,entertainment,"entertainment,trending",179,30,6,0.69,12
+46,What's your take on the potential of renewable energy technologies?,2023-12-28 19:50:48,science,"science,controversial",178,6,5,0.72,10
+47,How do you stay updated with the latest tech trends?,2023-12-15 19:50:48,technology,"technology,controversial",208,95,42,0.04,10
+48,What are your thoughts on immigration reform?,2024-05-24 19:50:48,politics,"politics,trending",319,227,162,-0.9,7
+49,What's your best tip for maintaining mental health?,2024-04-28 19:50:48,health,"health,new",359,20,8,-0.6,8
+50,What's your take on the ethical implications of gene editing?,2024-01-02 19:50:48,technology,"technology,controversial",636,492,287,-0.63,10
+51,What's your take on the future of personalized medicine?,2023-11-14 19:50:48,health,"health,trending",610,421,345,0.76,9
+52,How do you think we can improve mental health awareness and support?,2024-04-28 19:50:48,health,"health,new",291,141,119,0.65,12
+53,Who's your favorite musician and why?,2023-12-28 19:50:48,entertainment,"entertainment,controversial",11,5,3,-0.17,6
+54,What do you think about the concept of a universal basic income in the age of automation?,2024-02-03 19:50:48,technology,"technology,new",219,25,4,-0.33,17
+55,What's your opinion on the role of diet in preventing chronic diseases?,2023-11-24 19:50:48,health,"health,popular",80,39,29,-0.84,12
+56,What's your favorite sport to watch and why?,2023-10-29 19:50:48,sports,"sports,controversial",179,106,55,0.96,8
+57,Who do you think is the most influential figure in entertainment right now?,2024-02-27 19:50:48,entertainment,"entertainment,new",192,116,80,-0.32,13
+58,What's your dream vacation destination?,2023-07-22 19:50:48,travel,"travel,popular",835,207,31,-0.02,5
+59,How do you think we can promote healthier eating habits?,2024-03-09 19:50:48,food,"food,new",678,292,114,-0.04,10
+60,What's your opinion on the rise of user-generated content platforms like TikTok?,2024-01-28 19:50:48,entertainment,"entertainment,controversial",503,117,100,-0.2,12
+61,How do you think technology is changing healthcare?,2023-10-11 19:50:48,health,"health,new",268,80,6,0.7,8
+62,What's your favorite travel hack or tip?,2023-08-11 19:50:48,travel,"travel,trending",876,337,315,0.29,7
+63,Who's your favorite musician and why?,2023-06-26 19:50:48,entertainment,"entertainment,popular",470,258,39,-0.53,6
+64,How do you think we can address global food waste?,2024-05-29 19:50:48,food,"food,popular",409,294,98,-0.5,10
+65,What's your take on the importance of sleep for overall health?,2023-06-28 19:50:48,health,"health,trending",630,214,193,0.38,11
+66,What's your opinion on alternative medicine?,2024-03-27 19:50:48,health,"health,trending",418,320,247,0.86,6
+67,What's your go-to recipe for impressing guests?,2024-02-02 19:50:48,food,"food,controversial",352,193,175,0.58,7
+68,What's your opinion on the current state of reality TV?,2023-11-15 19:50:48,entertainment,"entertainment,new",803,665,474,0.73,10
+69,Who do you consider the greatest athlete of all time and why?,2023-12-07 19:50:48,sports,"sports,trending",756,330,138,-1.0,12
+70,What's your take on the issue of doping in professional sports?,2023-12-26 19:50:48,sports,"sports,popular",347,340,112,0.6,11
+71,What's your opinion on alternative medicine?,2024-02-27 19:50:48,health,"health,popular",113,64,20,-0.63,6
+72,What's your take on the ethical implications of genetic engineering?,2024-03-04 19:50:48,science,"science,new",894,133,60,0.24,10
+73,What's your take on the importance of sleep for overall health?,2023-11-22 19:50:48,health,"health,new",647,300,82,-0.44,11
+74,What's your opinion on the current state of vaccine development?,2023-10-24 19:50:48,science,"science,popular",904,484,370,0.21,10
+75,What's your take on campaign finance reform?,2024-01-18 19:50:48,politics,"politics,controversial",262,251,113,-0.27,7
+76,What's your take on space exploration?,2024-04-10 19:50:48,science,"science,popular",238,66,15,0.25,6
+77,How do you think sustainable tourism can be promoted?,2024-03-18 19:50:48,travel,"travel,trending",121,44,44,0.74,9
+78,How do you protect your online privacy?,2023-10-26 19:50:48,technology,"technology,controversial",159,0,0,-0.7,7
+79,How do you balance work and personal wellness?,2024-06-21 19:50:48,health,"health,controversial",74,19,1,-0.55,8
+80,How do you think video games are influencing other forms of entertainment?,2023-08-08 19:50:48,entertainment,"entertainment,trending",234,126,45,0.49,12
+81,How has the pandemic affected your eating habits?,2023-12-15 19:50:48,food,"food,controversial",202,127,25,-0.26,8
+82,What's your take on the issue of doping in professional sports?,2024-01-16 19:50:48,sports,"sports,popular",515,189,74,-0.86,11
+83,How do you think virtual reality will change education?,2023-07-25 19:50:48,technology,"technology,trending",308,203,157,-0.89,9
+84,What's your opinion on the role of diet in preventing chronic diseases?,2024-01-29 19:50:48,health,"health,new",123,117,100,-0.34,12
+85,How do you think the pandemic has affected the film industry?,2024-04-07 19:50:48,entertainment,"entertainment,trending",336,249,120,-0.14,11
+86,How do you think technology is changing the way we travel?,2024-03-30 19:50:48,travel,"travel,controversial",443,326,87,0.25,11
+87,What's your go-to recipe for impressing guests?,2024-06-20 19:50:48,food,"food,new",368,38,10,0.54,7
+88,What's your favorite cooking show and why?,2024-04-04 19:50:48,food,"food,trending",176,82,25,0.64,7
+89,What's your favorite food trend of the past year?,2023-08-06 19:50:48,food,"food,trending",414,308,262,-0.3,9
+90,What's your favorite cuisine and why?,2024-01-28 19:50:48,food,"food,new",432,127,91,0.99,6
+91,What's your favorite tech gadget and why?,2023-10-01 19:50:48,technology,"technology,new",939,729,465,-0.53,7
+92,How do you think we can make travel more accessible to everyone?,2023-09-02 19:50:48,travel,"travel,trending",478,342,335,0.25,12
+93,What's your favorite food trend of the past year?,2023-09-11 19:50:48,food,"food,popular",720,651,623,-0.68,9
+94,How do you think the pandemic has affected the world of sports?,2023-11-26 19:50:48,sports,"sports,new",949,214,75,0.66,12
+95,What's your opinion on the role of exercise in maintaining good health?,2023-10-07 19:50:48,health,"health,controversial",154,82,3,-0.19,12
+96,Who do you consider the greatest athlete of all time and why?,2023-09-03 19:50:48,sports,"sports,controversial",587,307,141,0.57,12
+97,How do you think technology is changing healthcare?,2023-07-29 19:50:48,health,"health,popular",367,254,195,0.95,8
+98,What's your take on the future of personalized medicine?,2024-04-15 19:50:48,health,"health,controversial",226,136,100,-0.05,9
+99,What's your take on the issue of doping in professional sports?,2024-03-06 19:50:48,sports,"sports,controversial",750,207,5,0.51,11
+100,Who do you consider the greatest athlete of all time and why?,2024-05-09 19:50:48,sports,"sports,trending",961,36,2,-0.5,12
+101,What's your favorite tech gadget and why?,2024-04-08 19:50:48,technology,"technology,popular",730,48,12,-0.63,7
+102,What's your take on the ethical implications of genetic engineering?,2023-08-22 19:50:48,science,"science,new",628,231,91,-0.45,10
+103,What's your opinion on the current state of vaccine development?,2024-05-01 19:50:48,science,"science,trending",383,30,26,-0.9,10
+104,What's your favorite travel experience and why?,2024-01-03 19:50:48,travel,"travel,new",736,465,157,-0.9,7
+105,How do you think education policy can be improved?,2024-03-25 19:50:48,politics,"politics,popular",567,256,88,-0.95,9
+106,How do you think we can address global food waste?,2024-03-30 19:50:48,food,"food,popular",898,594,511,0.35,10
+107,What's your opinion on the role of diet in preventing chronic diseases?,2024-03-10 19:50:48,health,"health,controversial",474,263,138,-0.92,12
+108,How can we make STEM fields more inclusive?,2023-08-08 19:50:48,science,"science,controversial",996,580,238,-0.9,8
+109,How do you think virtual concerts compare to live performances?,2024-01-24 19:50:48,entertainment,"entertainment,controversial",174,20,8,0.01,10
+110,How do you protect your online privacy?,2024-05-25 19:50:48,technology,"technology,trending",337,57,38,0.07,7
+111,How do you stay motivated to maintain a healthy lifestyle?,2024-01-25 19:50:48,health,"health,controversial",100,62,39,0.22,10
+112,What's the most memorable place you've visited?,2024-01-24 19:50:48,travel,"travel,popular",836,206,47,0.64,7
+113,How do you think we can make travel more accessible to everyone?,2024-01-28 19:50:48,travel,"travel,controversial",674,365,61,-0.08,12
+114,How do you think we can address global food waste?,2023-07-03 19:50:48,food,"food,popular",591,435,97,0.97,10
+115,What's your take on the ethical implications of genetic engineering?,2023-08-21 19:50:48,science,"science,controversial",654,378,283,-0.43,10
+116,What are your thoughts on the current economic policies?,2024-06-08 19:50:48,politics,"politics,popular",494,96,36,-0.48,9
+117,How do you stay motivated to exercise regularly?,2024-05-02 19:50:48,sports,"sports,trending",549,58,15,0.82,8
+118,How do you prepare for a trip to a new destination?,2023-09-04 19:50:48,travel,"travel,trending",319,56,27,-0.85,11
+119,How do you think AI will impact scientific research?,2023-07-06 19:50:48,science,"science,trending",557,144,41,0.17,9
+120,How do you think sports can promote social change?,2023-07-13 19:50:48,sports,"sports,controversial",146,16,0,-0.13,9
+121,What's your take on the rise of digital nomads?,2024-04-17 19:50:48,travel,"travel,new",820,342,329,0.22,9
+122,What role should social media play in politics?,2024-05-17 19:50:48,politics,"politics,trending",842,535,6,0.43,8
+123,How do you think technology is changing the restaurant industry?,2024-04-02 19:50:48,food,"food,new",949,335,44,0.48,10
+124,How do you think social media has influenced food culture?,2024-03-21 19:50:48,food,"food,popular",630,434,313,-0.83,10
+125,What's your favorite travel experience and why?,2024-03-12 19:50:48,travel,"travel,popular",979,372,133,0.28,7
+126,How is AI changing our daily lives?,2023-12-27 19:50:48,technology,"technology,trending",644,70,28,0.38,7
+127,What are your thoughts on the future of autonomous vehicles?,2024-05-28 19:50:48,technology,"technology,trending",995,189,121,-0.46,10
+128,How has streaming changed the TV industry?,2024-05-02 19:50:48,entertainment,"entertainment,controversial",841,330,84,0.87,7
+129,What's your take on the increasing diversity in Hollywood productions?,2024-01-04 19:50:48,entertainment,"entertainment,controversial",944,701,482,-0.48,10
+130,What's your opinion on the pay gap between male and female athletes?,2024-03-21 19:50:48,sports,"sports,new",308,98,44,0.96,12
+131,How do you think technology is changing sports?,2023-08-27 19:50:48,sports,"sports,new",837,790,85,0.73,8
+132,How do you think political polarization can be reduced?,2023-09-30 19:50:48,politics,"politics,trending",170,3,1,0.13,9
+133,How do you think climate change will impact travel in the future?,2024-04-23 19:50:48,travel,"travel,new",600,336,116,-0.3,12
+134,What's your best tip for maintaining mental health?,2023-08-09 19:50:48,health,"health,popular",138,138,22,-0.59,8
+135,How do you think sports can promote social change?,2024-03-23 19:50:48,sports,"sports,controversial",362,195,170,-0.25,9
+136,What's your go-to recipe for impressing guests?,2023-10-14 19:50:48,food,"food,new",450,31,17,0.83,7
+137,What's your favorite coding language and why?,2024-05-23 19:50:48,technology,"technology,trending",862,204,12,-0.09,7
+138,How do you prepare for a trip to a new destination?,2024-03-13 19:50:48,travel,"travel,controversial",93,3,2,-0.58,11
+139,How do you think climate change will impact global food production?,2023-12-27 19:50:48,food,"food,trending",66,63,37,-0.23,11
+140,How do you think climate change will impact global food production?,2023-10-24 19:50:48,food,"food,new",112,13,0,0.24,11
+141,What's your go-to recipe for impressing guests?,2023-06-30 19:50:48,food,"food,controversial",253,169,29,-0.29,7
+142,What's your opinion on the rise of user-generated content platforms like TikTok?,2024-06-22 19:50:48,entertainment,"entertainment,controversial",571,203,173,0.41,12
+143,How do you think climate change should be addressed politically?,2024-03-30 19:50:48,politics,"politics,popular",606,576,360,-0.05,10
+144,How do you think political polarization can be reduced?,2024-03-26 19:50:48,politics,"politics,controversial",773,583,218,0.53,9
+145,How do you think social media has influenced food culture?,2023-10-14 19:50:48,food,"food,popular",448,338,39,-0.24,10
+146,What's your opinion on genetically modified foods?,2023-08-20 19:50:48,food,"food,new",201,111,36,0.85,7
+147,How has the pandemic affected your eating habits?,2024-03-18 19:50:48,food,"food,popular",294,70,9,0.02,8
+148,What's your take on campaign finance reform?,2024-03-31 19:50:48,politics,"politics,controversial",57,35,2,-0.72,7
+149,What's your favorite food trend of the past year?,2024-01-14 19:50:48,food,"food,popular",771,748,102,-0.16,9
+150,How can we improve voter turnout?,2024-04-06 19:50:48,politics,"politics,trending",541,108,84,0.36,6
+151,How do you think education policy can be improved?,2023-12-29 19:50:48,politics,"politics,controversial",534,290,170,-0.37,9
+152,What's your opinion on alternative medicine?,2024-06-22 19:50:48,health,"health,popular",376,333,333,-0.93,6
+153,How do you protect your online privacy?,2023-07-14 19:50:48,technology,"technology,controversial",515,450,431,-0.43,7
+154,What's your opinion on the current state of vaccine development?,2023-10-02 19:50:48,science,"science,new",246,47,45,0.72,10
+155,What are your thoughts on the current economic policies?,2023-10-05 19:50:48,politics,"politics,trending",512,268,143,0.34,9
+156,How do you think we can improve global access to healthcare?,2024-03-18 19:50:48,health,"health,trending",154,82,77,0.52,11
+157,How do you think we can increase political engagement among young people?,2024-04-30 19:50:48,politics,"politics,controversial",381,264,144,0.62,12
+158,What's your favorite book-to-movie adaptation and why?,2023-11-10 19:50:48,entertainment,"entertainment,popular",182,46,46,0.65,7
+159,How do you think we can increase political engagement among young people?,2024-06-23 19:50:48,politics,"politics,controversial",291,278,208,-0.6,12
+160,What do you think about the latest iPhone?,2023-11-28 19:50:48,technology,"technology,controversial",502,168,110,-0.35,8
+161,What are your thoughts on the future of autonomous vehicles?,2024-02-16 19:50:48,technology,"technology,popular",47,20,12,-0.15,10
+162,How do you think technology is changing the restaurant industry?,2023-11-02 19:50:48,food,"food,new",47,28,8,-0.6,10
+163,How do you think we can improve mental health awareness and support?,2024-01-22 19:50:48,health,"health,popular",839,58,48,-0.92,12
+164,What's your take on the importance of sleep for overall health?,2023-09-17 19:50:48,health,"health,new",654,266,199,0.63,11
+165,What's your go-to recipe for impressing guests?,2024-06-18 19:50:48,food,"food,new",62,8,2,-0.45,7
+166,What's your favorite sport to watch and why?,2024-05-28 19:50:48,sports,"sports,popular",905,87,1,0.31,8
+167,How do you prepare for a trip to a new destination?,2024-05-27 19:50:48,travel,"travel,new",425,397,336,-0.92,11
+168,How can we make STEM fields more inclusive?,2023-12-19 19:50:48,science,"science,trending",96,47,23,-0.44,8
+169,What's your dream vacation destination?,2024-03-14 19:50:48,travel,"travel,popular",587,217,129,0.92,5
+170,How do you think education policy can be improved?,2024-04-24 19:50:48,politics,"politics,trending",670,109,1,-0.84,9
+171,How do you think climate change will impact travel in the future?,2023-09-19 19:50:48,travel,"travel,controversial",942,308,133,0.36,12
+172,How do you think technology is changing the restaurant industry?,2023-11-21 19:50:48,food,"food,trending",441,249,118,0.73,10
+173,What's your opinion on the rise of smart home devices?,2023-10-27 19:50:48,technology,"technology,new",951,457,155,0.13,10
+174,What's your opinion on the current state of healthcare policy?,2023-12-21 19:50:48,politics,"politics,trending",16,5,2,-0.85,10
+175,How do you think we can promote healthier eating habits?,2023-09-13 19:50:48,food,"food,new",940,453,434,0.68,10
+176,How is AI changing our daily lives?,2024-02-04 19:50:48,technology,"technology,trending",287,65,49,0.47,7
+177,What do you think about the current trend of rebooting old TV shows and movies?,2024-02-11 19:50:48,entertainment,"entertainment,popular",76,35,11,0.53,15
+178,Who do you consider the greatest athlete of all time and why?,2023-09-11 19:50:48,sports,"sports,controversial",525,515,173,0.16,12
+179,How do you think foreign policy should be approached in the current global climate?,2024-05-01 19:50:48,politics,"politics,controversial",857,109,107,0.64,14
+180,What's your favorite sport to watch and why?,2024-04-20 19:50:48,sports,"sports,new",388,226,131,-0.13,8
+181,How do you think social media has impacted celebrity culture?,2024-02-24 19:50:48,entertainment,"entertainment,controversial",876,431,192,-0.42,10
+182,How do you think quantum computing will change scientific research?,2024-04-18 19:50:48,science,"science,new",917,32,15,-0.89,10
+183,Who do you think will win the World Cup this year?,2024-02-11 19:50:48,sports,"sports,trending",17,2,1,0.03,11
+184,How do you balance work and personal wellness?,2023-11-03 19:50:48,health,"health,controversial",108,56,20,-0.13,8
+185,What's your take on the issue of doping in professional sports?,2024-04-02 19:50:48,sports,"sports,popular",288,187,139,-0.04,11
+186,How do you think neuroscience is changing our understanding of consciousness?,2024-05-05 19:50:48,science,"science,trending",963,208,166,-0.42,11
+187,How do you think virtual concerts compare to live performances?,2024-02-07 19:50:48,entertainment,"entertainment,new",14,0,0,-0.59,10
+188,What do you think about the latest iPhone?,2023-12-01 19:50:48,technology,"technology,trending",921,417,403,0.95,8
+189,What do you think about the current trend of rebooting old TV shows and movies?,2024-05-16 19:50:48,entertainment,"entertainment,trending",225,30,22,0.94,15
+190,How do you think we can address the replication crisis in science?,2024-01-05 19:50:48,science,"science,trending",633,321,16,-0.69,12
+191,What's your favorite cooking show and why?,2023-07-23 19:50:48,food,"food,controversial",724,459,219,-0.96,7
+192,How can we make STEM fields more inclusive?,2023-11-12 19:50:48,science,"science,controversial",225,75,31,-0.71,8
+193,How do you think we can improve global access to healthcare?,2024-03-31 19:50:48,health,"health,controversial",809,778,81,-0.82,11
+194,What's your take on campaign finance reform?,2024-03-14 19:50:48,politics,"politics,popular",695,234,42,0.89,7
+195,What's your favorite cooking show and why?,2023-12-12 19:50:48,food,"food,new",313,72,35,-0.6,7
+196,What's your favorite tech gadget and why?,2023-07-21 19:50:48,technology,"technology,controversial",653,508,26,-0.86,7
+197,How do you think virtual reality will change education?,2023-10-20 19:50:48,technology,"technology,trending",778,438,316,0.05,9
+198,How do you balance work and personal wellness?,2023-12-10 19:50:48,health,"health,popular",339,228,186,0.69,8
+199,What's your take on the impact of stress on physical health?,2024-05-25 19:50:48,health,"health,popular",450,304,228,0.79,11
+200,What's your opinion on the current state of vaccine development?,2024-04-19 19:50:48,science,"science,popular",447,428,246,-0.72,10
