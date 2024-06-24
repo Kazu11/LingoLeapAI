@@ -11,8 +11,7 @@ Nakula Sadewa are initiate LingoLeap. Appweb for everyone who want to keep in to
 
 |Pandas|Numpy|Flask|
 |:-|:-|:-|
-|Streamlit||Tensorflow|Transformers|
-|:-|:-|:-|
+|Streamlit|Tensorflow|Transformers|
 BERT|
 # Dataset
 |FacebookMBART|for Translate|
