@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LingoLeap - Lawan Bicara</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('user_input') }}">User Input</a></li>
+                <li><a href="{{ url_for('get_recommendations') }}">Get Recommendations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Lawan Bicara</h1>
+        <form method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="number" name="age" placeholder="Age" required>
+            <input type="text" name="occupation" placeholder="Occupation" required>
+            <select name="interests" multiple required>
+                <option disabled>Select at least 2 interests</option>
+                {% for topic in topics %}
+                    <option value="{{ topic }}">{{ topic }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

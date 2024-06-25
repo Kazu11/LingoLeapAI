@@ -1,15 +1,15 @@
 import logging
 import traceback
-from flask import Flask, redirect, render_template_string, request, jsonify, url_for
+from flask import Flask, redirect, render_template, request, jsonify, url_for
 import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from scipy.sparse.linalg import svds
+from transformers import MBartForConditionalGeneration, MBart50Tokenizer
 
 # Set up basic logging
-logging.basicConfig(level=logging.DEBUG)
-
+logging.getLogger('watchdog').setLevel(logging.WARNING)
 app = Flask(__name__)
 
 # Load the datasets
@@ -21,6 +21,7 @@ except FileNotFoundError:
     conversations_df = pd.DataFrame(columns=['id', 'topic', 'content'])
     users_df = pd.DataFrame(columns=['id', 'username', 'age', 'interests'])
     interactions_df = pd.DataFrame(columns=['user_id', 'conversation_id', 'interaction_type'])
+
 
 # Idiom dataset
 english_idioms = [
@@ -171,79 +172,45 @@ def recommend_idioms(age, n=5):
     recommended = sorted(suitable_idioms, key=lambda x: x['min_age'], reverse=True)[:n]
     return recommended
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def home():
+    topics = conversations_df['topic'].unique().tolist()
+    return render_template('home.html', topics=topics)
+
+@app.route('/user_input', methods=['GET', 'POST'])
+def user_input():
     global users_df
     topics = conversations_df['topic'].unique().tolist()
     
     if request.method == 'POST':
-        if 'username' in request.form:
-            # User input form submission
-            user_id = len(users_df) + 1
-            username = request.form['username']
-            age = int(request.form['age'])
-            interests = request.form.getlist('interests')
-            occupation = request.form['occupation']
-            
-            new_user = pd.DataFrame({
-                'id': [user_id],
-                'username': [username],
-                'age': [age],
-                'interests': [','.join(interests)],
-                'occupation': [occupation]
-            })
-            
-            users_df = pd.concat([users_df, new_user], ignore_index=True)
-            users_df.to_csv('users.csv', index=False)
-            
-            return redirect(url_for('recommend', user_id=user_id))
-        else:
-            # Recommendation form submission
-            user_id = request.form.get('user_id')
-            n = request.form.get('n', 5)
-            return redirect(url_for('recommend', user_id=user_id, n=n))
+        user_id = len(users_df) + 1
+        username = request.form['username']
+        age = int(request.form['age'])
+        interests = request.form.getlist('interests')
+        occupation = request.form['occupation']
+        
+        new_user = pd.DataFrame({
+            'id': [user_id],
+            'username': [username],
+            'age': [age],
+            'interests': [','.join(interests)],
+            'occupation': [occupation]
+        })
+        
+        users_df = pd.concat([users_df, new_user], ignore_index=True)
+        users_df.to_csv('users.csv', index=False)
+        
+        return redirect(url_for('recommend', user_id=user_id))
     
-    html = """
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>User Input and Recommendation System</title>
-        <style>
-            body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
-            form { margin-top: 20px; }
-            input, select { margin: 10px 0; padding: 5px; width: 200px; }
-            input[type="submit"] { cursor: pointer; width: auto; }
-        </style>
-    </head>
-    <body>
-        <h1>User Input</h1>
-        <form method="POST">
-            Username: <input type="text" name="username" required><br>
-            Age: <input type="number" name="age" required><br>
-            Occupation: <input type="text" name="occupation" required><br>
-            Interests (select at least 2):<br>
-            <select name="interests" multiple required>
-                {% for topic in topics %}
-                    <option value="{{ topic }}">{{ topic }}</option>
-                {% endfor %}
-            </select><br>
-            <input type="submit" value="Submit">
-        </form>
+    return render_template('user_input.html', topics=topics)
 
-        <h1>Get Recommendations</h1>
-        <form method="POST">
-            <label for="user_id">User ID:</label><br>
-            <input type="number" id="user_id" name="user_id" required><br>
-            <label for="n">Number of recommendations:</label><br>
-            <input type="number" id="n" name="n" value="5"><br>
-            <input type="submit" value="Get Recommendations">
-        </form>
-    </body>
-    </html>
-    """
-    return render_template_string(html, topics=topics)
+@app.route('/get_recommendations', methods=['GET', 'POST'])
+def get_recommendations():
+    if request.method == 'POST':
+        user_id = request.form.get('user_id')
+        n = request.form.get('n', 5)
+        return redirect(url_for('recommend', user_id=user_id, n=n))
+    return render_template('get_recommendations.html')
 
 @app.route('/recommend')
 def recommend():
@@ -277,49 +244,7 @@ def recommend():
         # Get idiom recommendations
         idiom_recommendations = recommend_idioms(age, n=3)
 
-        html = """
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Recommendations</title>
-            <style>
-                body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
-                h1, h2 { color: #333; }
-                .recommendation, .idiom { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
-                .recommendation h2, .idiom h3 { color: #0066cc; margin-top: 0; }
-                .recommendation p, .idiom p { margin: 5px 0; }
-            </style>
-        </head>
-        <body>
-            <h1>Recommendations for {{ name }} (User ID: {{ user_id }})</h1>
-            <p>Age: {{ age }}</p>
-            <p>Based on topics: {{ topics }}</p>
-            <p>Occupation: {{ occupation }}</p>
-            
-            <h2>Content Recommendations:</h2>
-            {% for item in recommendations %}
-            <div class="recommendation">
-                <h2>#{{ item['id'] }}: {{ item['topic'] }}</h2>
-                <p>{{ item['content'] }}</p>
-            </div>
-            {% endfor %}
-
-            <h2>Idiom Recommendations:</h2>
-            {% for idiom in idiom_recommendations %}
-            <div class="idiom">
-                <h3>{{ idiom['idiom'] }}</h3>
-                <p><strong>Meaning:</strong> {{ idiom['meaning'] }}</p>
-                <p><strong>Minimum Age:</strong> {{ idiom['min_age'] }}</p>
-            </div>
-            {% endfor %}
-            
-            <a href="/">Back to Home</a>
-        </body>
-        </html>
-        """
-        return render_template_string(html, name=name, user_id=user_id, age=age, topics=', '.join(topics), occupation=occupation, recommendations=result, idiom_recommendations=idiom_recommendations)
+        return render_template('recommend.html', name=name, user_id=user_id, age=age, topics=', '.join(topics), occupation=occupation, recommendations=result, idiom_recommendations=idiom_recommendations)
 
     except Exception as e:
         logging.error(f"An error occurred: {str(e)}")

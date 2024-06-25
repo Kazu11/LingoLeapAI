@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LingoLeap - Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('user_input') }}">User Input</a></li>
+                <li><a href="{{ url_for('get_recommendations') }}">Get Recommendations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Recommendations for {{ name }} (User ID: {{ user_id }})</h1>
+        <p><strong>Age:</strong> {{ age }}</p>
+        <p><strong>Topics:</strong> {{ topics }}</p>
+        <p><strong>Occupation:</strong> {{ occupation }}</p>
+        
+        <h2>Content Recommendations:</h2>
+        {% for item in recommendations %}
+        <div class="recommendation">
+            <h3>#{{ item['id'] }}: {{ item['topic'] }}</h3>
+            <p>{{ item['content'] }}</p>
+        </div>
+        {% endfor %}
+
+        <h2>Idiom Recommendations:</h2>
+        {% for idiom in idiom_recommendations %}
+        <div class="idiom">
+            <h3>{{ idiom['idiom'] }}</h3>
+            <p><strong>Meaning:</strong> {{ idiom['meaning'] }}</p>
+            <p><strong>Minimum Age:</strong> {{ idiom['min_age'] }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LingoLeap - Get Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('user_input') }}">User Input</a></li>
+                <li><a href="{{ url_for('get_recommendations') }}">Get Recommendations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Get Recommendations</h1>
+        <form method="POST">
+            <input type="number" id="user_id" name="user_id" placeholder="User ID" required>
+            <input type="number" id="n" name="n" placeholder="Number of recommendations" value="5">
+            <input type="submit" value="Get Recommendations">
+        </form>
+    </div>
+</body>
+</html>
